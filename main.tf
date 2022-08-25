@@ -47,6 +47,7 @@ locals {
   common_tags = "${map(
    " User", "${var.user}",
    " CostCenter", "${var.cost_center}"
+   " Application", "${var.application}"
  )}"
 }
 
@@ -66,6 +67,9 @@ variable "user" {
 variable "cost_center" {
   description = "Cost Center of the User requesting the resources"
 }
+
+variable "application"{}
+
 
 output "app_service_name" {
   value = "${azurerm_app_service.main.name}"
