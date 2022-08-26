@@ -48,6 +48,7 @@ locals {
    " User", "${var.user}",
    " CostCenter", "${var.cost_center}"
    " Application", "${var.application}"
+   " Owner", "${var.owner}"
  )}"
 }
 
@@ -66,6 +67,10 @@ variable "user" {
 
 variable "cost_center" {
   description = "Cost Center of the User requesting the resources"
+}
+
+variable "owner" {
+  description = "Owner of the User requesting the resources"
 }
 
 variable "application"{}
